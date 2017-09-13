@@ -28,3 +28,8 @@ HenCoder 绘制 6 属性动画 练习项目
 ![](images/project_sample.png)
 
 练习做完，这期的内容也就掌握得差不多了。
+
+
+1. View.animate() 方法会返回 ViewPropertyAnimator 对象，可以直接对 View 进行动画
+2. ViewPropertyAnimator 可以同时执行一系列动画(Translation/Rotation/Scale/Alpha)
+3. ObjectAnimator 可以执行 ViewPropertyAnimator 无法实现的动画，但是需要在自定义 View 中对需要改变的属性添加 setter/ getter 方法，因为 ObjectAnimator 就是调用 target 的属性的 setter 方法来改变，另外，如果没有指定动画的初始值，还会调用 getter 方法来获取当前值作为初始值
